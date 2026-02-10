@@ -32,4 +32,168 @@
  */
 export function calculateCoffeePrice(size, type, extras = {}) {
   // Your code here
+  if(size == "small" || size == "medium" || size == "large"){
+    if(type == "regular" || type == "latte" || type == "cappuccino" ||type == "mocha"){
+      if(size == "small"){
+        // for small
+        if(type == "regular"){
+          // for small regular
+          if(extras.whippedCream == true){
+            return 3.50;
+          }else if(extras.extraShot == true){
+            return 3.75;
+          }else if(extras.extraShot == true && extras.whippedCream == true){
+            return 4.25;
+          }else{
+            return 3.00;
+            // ((Math.round(3 * 100)/100).toFixed(2))
+          }
+
+        }else if(type == "latte"){
+          // for small latte
+          if(extras.whippedCream == true){
+            return 4.50;
+          }else if(extras.extraShot == true){
+            return 4.75;
+          }else if(extras.extraShot == true && extras.whippedCream == true){
+            return 5.25;
+          }else{
+            return 4.00;
+            // ((Math.round(3 * 100)/100).toFixed(2))
+          }
+
+        }else if(type == "cappuccino"){
+          // for small cappuccino
+          if(extras.whippedCream == true){
+            return 5.00;
+          }else if(extras.extraShot == true){
+            return 5.25;
+          }else if(extras.extraShot == true && extras.whippedCream == true){
+            return 5.75;
+          }else{
+            return 4.50;
+            // ((Math.round(3 * 100)/100).toFixed(2))
+          }
+        }else{
+          // for small mocha
+          if(extras.whippedCream == true){
+            return 5.50;
+          }else if(extras.extraShot == true){
+            return 5.75;
+          }else if(extras.extraShot == true && extras.whippedCream == true){
+            return 6.25;
+          }else{
+            return 5.00;
+            // ((Math.round(3 * 100)/100).toFixed(2))
+          }
+        }
+
+      }else if(size == "medium"){
+        // for medium
+        if(type == "regular"){
+          // for medium regular
+          if(extras.whippedCream == true){
+            return 4.50;
+          }else if(extras.extraShot == true){
+            return 4.75;
+          }else if(extras.extraShot == true && extras.whippedCream == true){
+            return 5.25;
+          }else{
+            return 4.00;
+            // ((Math.round(3 * 100)/100).toFixed(2))
+          }
+        }else if(type == "latte"){
+          // for medium latte
+          if(extras.whippedCream == true){
+            return 5.50;
+          }else if(extras.extraShot == true){
+            return 5.75;
+          }else if(extras.extraShot == true && extras.whippedCream == true){
+            return 6.25;
+          }else{
+            return 5.00;
+            // ((Math.round(3 * 100)/100).toFixed(2))
+          }
+        }else if(type == "cappuccino"){
+          // for medium cappuccino
+          if(extras.whippedCream == true){
+            return 6.00;
+          }else if(extras.extraShot == true){
+            return 6.25;
+          }else if(extras.extraShot == true && extras.whippedCream == true){
+            return 6.75;
+          }else{
+            return 5.50;
+            // ((Math.round(3 * 100)/100).toFixed(2))
+          }
+        }else{
+          // for medium mocha
+          if(extras.whippedCream == true){
+            return 6.50;
+          }else if(extras.extraShot == true){
+            return 6.75;
+          }else if(extras.extraShot == true && extras.whippedCream == true){
+            return 7.25;
+          }else{
+            return 6.00;
+            // ((Math.round(3 * 100)/100).toFixed(2))
+          }
+        }
+      }else{
+        // for large
+        if(type == "regular"){
+          // for large regular
+          if(extras.whippedCream == true){
+            return 5.50;
+          }else if(extras.extraShot == true){
+            return 5.75;
+          }else if(extras.extraShot == true && extras.whippedCream == true){
+            return 6.25;
+          }else{
+            return 5.00;
+            // ((Math.round(3 * 100)/100).toFixed(2))
+          }
+        }else if(type == "latte"){
+          // for large latte
+          if(extras.extraShot == true && extras.whippedCream == true){
+            return 7.25;
+          }else if(extras.extraShot == true){
+            return 6.75;
+          }else if(extras.whippedCream == true){
+            return 6.50;
+          }else{
+            return 6.00;
+            // ((Math.round(3 * 100)/100).toFixed(2))
+          }
+        }else if(type == "cappuccino"){
+          // for large cappuccino
+          if(extras.extraShot == true && extras.whippedCream == true){
+            return 7.75;
+          }else if(extras.extraShot == true){
+            return 7.25;
+          }else if(extras.whippedCream == true){
+            return 7.00;
+          } else{
+            return 6.50;
+            // ((Math.round(3 * 100)/100).toFixed(2))
+          }
+        }else{
+          // for large mocha
+          if(extras.extraShot == true && extras.whippedCream == true){
+            return 8.25;
+          }else if(extras.extraShot == true){
+            return 7.75
+          }else if(extras.whippedCream == true){
+            return 7.50;
+          }else{
+            return 7.00;
+          }
+        }
+      }
+    }else{
+      return -1;
+    }
+  }else{
+    return -1;
+  }
 }

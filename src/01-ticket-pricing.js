@@ -24,4 +24,64 @@
  */
 export function getTicketPrice(age, isWeekend) {
   // Your code here
+  if(age >= 0 && typeof(age) == "number"){
+    if(isWeekend){
+      // when weekend is true
+      if(age > 0 && age < 13){
+        // children
+        // console.log(`
+        //   The price for children is: $8
+        //   Weekend surcharge is :     $3
+        //   The total price is:        $11
+        //   `);
+        return 11;
+      }else if(age > 12 && age < 18){
+        // teen
+        // console.log(`
+        //   The price for teen is: $12
+        //   Weekend surcharge is : $3
+        //   The total price is:    $15
+        //   `);
+        return 15;
+      }else if(age > 17 && age < 60){
+        // adults
+        // console.log(`
+        //   The price for adults is: $15
+        //   Weekend surcharge is :   $3
+        //   The total price is:      $18
+        //   `);
+        return 18;
+      }else{
+        // seniors
+        // console.log(`
+        //   The price for seniors is: $10
+        //   Weekend surcharge is :    $3
+        //   The total price is:       $13
+        //   `);
+        return 13;
+      }
+    }else{
+      // when weekend is not true
+      if(age >= 0 && age < 13){
+        // children
+        // console.log(`The price for children is: $8`);
+        return 8;
+      }else if(age > 12 && age < 18){
+        // teen
+        // console.log(`The price for teen is: $12`);
+        return 12;
+      }else if(age > 17 && age < 60){
+        // adults
+        // console.log(`The price for adult is: $15`);
+        return 15;
+      }else{
+        // seniors
+        // console.log(`The price for seniors is: $`  10);
+        return 10;
+        
+      }
+    }
+  }else{
+    return -1;
+  }
 }
